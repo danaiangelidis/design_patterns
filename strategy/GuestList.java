@@ -13,6 +13,8 @@ public class GuestList {
      */
     public GuestList(String aTitle) {
         this.setTitle(aTitle);
+        this.people = new ArrayList<>();
+        this.searchBehavior = new LinearSearch();
     }
 
     /**

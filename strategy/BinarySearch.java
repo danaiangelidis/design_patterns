@@ -14,16 +14,9 @@ public class BinarySearch implements SearchBehavior {
 		Collections.sort(data);
 		String middle = data.get(data.size()/2);
 	
-		/**
-		 * Checks if the item is in the middle of the ArrayList.
-		 */
 		if(item.equalsIgnoreCase(middle)) {
 			return true;
 		}
-		/**
-		 * Splits the ArrayList below the middle and creates a new ArrayList to search for the item by recursively 
-		 * splitting the ArrayList.
-		 */
 		else if(item.compareTo(middle) == -1) {
 			ArrayList<String> first = new ArrayList<String>();
 			for(int i=0; i<data.size()/2; i++) {
@@ -31,10 +24,6 @@ public class BinarySearch implements SearchBehavior {
 			}
 			return contains(first, item);
 		}
-		/**
-		 * Splits the ArrayList above the middle and creates a new ArrayList to search for the item by recursively 
-		 * splitting the ArrayList.
-		 */
 		else if(item.compareTo(middle) == 1) {
 			ArrayList<String> second = new ArrayList<String>();
 			for(int i=data.size()/2; i<data.size(); i++) {
