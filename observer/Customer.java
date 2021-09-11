@@ -21,6 +21,7 @@ public class Customer implements Observer {
         this.subject = subject;
         this.firstName = firstName;
         this.lastName = lastName;
+        
     }
 
     /**
