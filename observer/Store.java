@@ -1,5 +1,4 @@
 package observer;
-import java.util.LinkedList;
 import java.util.Queue;
 /*
  * Written by Danai Angelidis
@@ -15,7 +14,7 @@ public class Store implements Observer {
      * @param subject New subject
      */
     public Store(Subject subject) {
-        this.bestSellers = new LinkedList();
+        //this.bestSellers = new LinkedList();
         this.subject = subject;       
     }
 
