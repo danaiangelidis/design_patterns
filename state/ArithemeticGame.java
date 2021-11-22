@@ -1,5 +1,9 @@
 import java.util.Scanner;
 
+/**
+ * Written by Danai Angelidis
+ */
+
 public class ArithemeticGame {
 
     private State easyState;
@@ -9,12 +13,18 @@ public class ArithemeticGame {
     private int score;
     private Scanner reader;
 
+    /**
+     * Constructor for ArithemeticGame.
+     */
     public ArithemeticGame() {
         this.score = 0;
         this.state = setState(easyState);
         this.reader = new Scanner(System.in);
     }
 
+    /**
+     * Generates a question for the user.
+     */
     public void pressQuestionButton() {
         int firstNum = this.state.getNum();
         int secondNum = this.state.getNum();
@@ -56,18 +66,35 @@ public class ArithemeticGame {
         }
     }
 
+    /**
+     * Sets difficulty state for the game.
+     * @param state The state that the game is going to be set to.
+     * @return The new state the game has been set to.
+     */
     public State setState(State state) {
         return this.state = state;
     }
 
+    /**
+     * Sets the state to easy.
+     * @return Easy state.
+     */
     public State getEasyState() {
         return this.easyState;
     }
 
+    /**
+     * Sets the state to medium.
+     * @return Medium state.
+     */
     public State getMediumState() {
         return this.mediumState;
     }
 
+    /**
+     * Sets the state to hard.
+     * @return Hard state.
+     */
     public State getHardState() {
         return this.hardState;
     }
